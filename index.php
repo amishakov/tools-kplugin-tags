@@ -34,13 +34,11 @@ Kirby::plugin("auaust/tags", [
     ]
   ],
   'options' => [
-    'storage' => [
-      // In which content object should the tags be stored?
-      'parent' => kirby()->site(),
-    ],
+    // A page which children are used to store the tag sets.
+    'storagePage' => null,
     // The prefix for the tags field. Is used before the set name.
     'prefix' => 'tags_',
-    // The name default set. Is used when no set is given.
+    // The default set's name. Is used when no set is given.
     'default' => 'default',
   ]
 ]);
