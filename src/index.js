@@ -1,10 +1,7 @@
+import TagsField from "./components/TagsField.vue";
+
 panel.plugin("auaust/tags", {
   fields: {
-    tags: {
-      props: {
-        tagset: String,
-      },
-      template: "<p>{{ tagset }}</p>",
-    },
+    tags: TagsField,
   },
 });
