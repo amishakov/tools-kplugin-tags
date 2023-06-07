@@ -1,5 +1,14 @@
 <template>
-  <p>Hello World</p>
+  <div>
+    <label for="textfield">{{ tagset }}</label>
+    <input type="text" name="textfield" />
+  </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  props: {
+    tagset: String,
+  },
+};
+</script>

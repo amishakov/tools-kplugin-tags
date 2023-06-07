@@ -56,11 +56,14 @@
       options
     };
   }
-  const _sfc_main = {};
+  const _sfc_main = {
+    props: {
+      tagset: String
+    }
+  };
   var _sfc_render = function render() {
     var _vm = this, _c = _vm._self._c;
-    _vm._self._setupProxy;
-    return _c("p", [_vm._v("Hello World")]);
+    return _c("div", [_c("label", { attrs: { "for": "textfield" } }, [_vm._v(_vm._s(_vm.tagset))]), _c("input", { attrs: { "type": "text", "name": "textfield" } })]);
   };
   var _sfc_staticRenderFns = [];
   _sfc_render._withStripped = true;
