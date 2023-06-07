@@ -4,7 +4,7 @@ panel.plugin("auaust/tags", {
       props: {
         tagset: String,
       },
-      template: "<p>{{ message }}</p>",
+      template: "<p>{{ tagset }}</p>",
     },
   },
 });
