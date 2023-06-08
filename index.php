@@ -2,6 +2,11 @@
 
 use Kirby\Cms\App as Kirby;
 
+load([
+  'TagPage' => 'models/TagPage.php',
+  'TagSetPage' => 'models/TagSetPage.php',
+], __DIR__);
+
 Kirby::plugin("auaust/tags", [
   'fields' => [
     // A selector field for tags
