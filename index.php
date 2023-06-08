@@ -34,8 +34,11 @@ Kirby::plugin("auaust/tags", [
     ]
   ],
   'options' => [
+    // A page which children are used to store the tags.
+    'tagsPage' => page('tags'),
     // A page which children are used to store the tag sets.
-    'storagePage' => null,
+    'tagSetsPage' => page('tag-sets'),
+
     // The prefix for the tags field. Is used before the set name.
     'prefix' => 'tags_',
     // The default set's name. Is used when no set is given.
