@@ -38,6 +38,10 @@ Kirby::plugin("auaust/tags", [
       ],
     ]
   ],
+  'pageModels' => [
+    'tag' => 'TagPage',
+    'tagset' => 'TagSetPage',
+  ],
   'options' => [
     // A page which children are used to store the tags.
     'tagsPage' => page('tags'),
