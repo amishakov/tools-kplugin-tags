@@ -1,7 +1,5 @@
 <?php
 
-use Kirby\Data\PHP;
-
 return [
   'title' => [
     'fr' => 'Tags',
