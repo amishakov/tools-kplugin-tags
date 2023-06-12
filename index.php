@@ -25,5 +25,7 @@ Kirby::plugin("auaust/tags", [
   ],
   'blueprints' => [
     'pages/tag' => require_once __DIR__ . '/blueprints/pages/tag.php',
+    'pages/tagset' => require_once __DIR__ . '/blueprints/pages/tagset.php',
+    'pages/tags' => require_once __DIR__ . '/blueprints/pages/tags.php',
   ]
 ]);
