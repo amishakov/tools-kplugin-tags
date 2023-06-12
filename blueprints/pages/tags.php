@@ -40,10 +40,10 @@ return [
           ],
           'help' => [
             'fr' => '' .
-              'Les tags permettent de connecter des produits entre eux par thème.' .
+              'Les tags permettent de connecter des produits entre eux par thème. ' .
               'Ils peuvent être utilisés comme filtres, pour faciliter la recherche, etc.',
             'en' => '' .
-              'Tags allow to connect products by theme.' .
+              'Tags allow to connect products by theme. ' .
               'They can be used as filters, to facilitate search, etc.'
           ],
           'template' => 'tag',
@@ -64,10 +64,10 @@ return [
           ],
           'help' => [
             'fr' => '' .
-              'Les groupes de tags permettent de regrouper des tags par thème.' .
+              'Les groupes de tags permettent de regrouper des tags par thème. ' .
               'Ils peuvent être utilisés pour connecter des produits, lister des produits par catégorie, etc.',
             'en' => '' .
-              'Tag sets allow to group tags by theme.' .
+              'Tag sets allow to group tags by theme. ' .
               'They can be used to connect products, list tags by category, etc.'
           ],
           'template' => 'tagset',
