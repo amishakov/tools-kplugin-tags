@@ -24,43 +24,6 @@ Kirby::plugin("auaust/tags", [
     'default' => 'default',
   ],
   'blueprints' => [
-    'pages/tag' => [
-      'title' => [
-        'fr' => 'Tag',
-        'en' => 'Tag'
-      ],
-      'icon' => 'tag',
-      'columns' => [
-        [
-          'width' => '2/3',
-          'sections' => [
-            'infos' => [
-              'type' => 'fields',
-              'fields' => [
-                'description' => [
-                  'type' => 'textarea',
-                  'label' => [
-                    'fr' => 'Description',
-                    'en' => 'Description'
-                  ],
-                  'buttons' => [
-                    'bold',
-                    'italic',
-                    '|',
-                    'link',
-                    '|',
-                  ],
-                  'size' => 'medium'
-                ],
-                'tagsets' => [
-                  'type' => 'pages',
-                  'query' => 'site.find("tagsets").children'
-                ]
-              ]
-            ]
-          ]
-        ]
-      ]
-    ]
+    'pages/tag' => require_once __DIR__ . '/blueprints/pages/tag.php',
   ]
 ]);
