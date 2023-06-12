@@ -16,7 +16,7 @@ return function ($kirby) {
             'fields' => [
               'tags' => [
                 'type' => 'pages',
-                'query' => 'site.find("' . kirby()->option('auaust.tags.tagsPage')->slug() . '").children'
+                'query' => 'site.find("' . $kirby->option('auaust.tags.tagsPage')->slug() . '").children'
               ]
             ]
           ]
