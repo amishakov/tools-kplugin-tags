@@ -24,10 +24,10 @@ Kirby::plugin("auaust/tags", [
     'default' => 'default',
   ],
   'blueprints' => [
-    'pages/tag' =>     require __DIR__ . '/blueprints/pages/tag.php',
-    'pages/tagset' =>  require __DIR__ . '/blueprints/pages/tagset.php',
+    'pages/tag' =>     require_once __DIR__ . '/blueprints/pages/tag.php',
+    'pages/tagset' =>  require_once __DIR__ . '/blueprints/pages/tagset.php',
     // Both tags and tagsets use the same blueprint as they're both only a way to access the tags.
-    'pages/tags' =>    require __DIR__ . '/blueprints/pages/tags.php',
-    'pages/tagsets' => require __DIR__ . '/blueprints/pages/tags.php'
+    'pages/tags' =>    $tagsBlueprint = require_once __DIR__ . '/blueprints/pages/tags.php',
+    'pages/tagsets' => $tagsBlueprint,
   ]
 ]);
