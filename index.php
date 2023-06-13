@@ -29,5 +29,11 @@ Kirby::plugin("auaust/tags", [
     // Both tags and tagsets use the same blueprint as they're both only a way to access the tags.
     'pages/tags' =>    $tagsBlueprint = require_once __DIR__ . '/blueprints/pages/tags.php',
     'pages/tagsets' => $tagsBlueprint,
+  ],
+  'fields' => [
+    // Tag's tagsets field.
+    'tagsTagsets' => [
+      'extends' => 'pages'
+    ]
   ]
 ]);
