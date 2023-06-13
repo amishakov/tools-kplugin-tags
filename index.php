@@ -10,7 +10,7 @@ load([
 Kirby::plugin("auaust/tags", [
   'fields' => [
     // Tag's tagsets field.
-    'tagsTagsets' => [
+    'tags-tagsets' => [
       'extends' => 'pages'
     ]
   ],

@@ -30,7 +30,7 @@ return function () {
                 'size' => 'medium'
               ],
               'tagsets' => [
-                'type' => 'tagsTagsets',
+                'type' => 'tags-tagsets',
                 'query' => 'site.find("tagsets").children',
                 'translate' => false,
                 'help' => [

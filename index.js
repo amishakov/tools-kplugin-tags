@@ -1,6 +1,6 @@
 panel.plugin("auaust/tags", {
   fields: {
-    tagsTagsets: {
+    "tags-tagsets": {
       extends: "k-pages-field",
     },
   },
