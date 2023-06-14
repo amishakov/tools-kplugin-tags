@@ -4,7 +4,7 @@ use Kirby\Cms\App as Kirby;
 
 load([
   'TagPage' => 'models/TagPage.php',
-  'TagSetPage' => 'models/TagSetPage.php',
+  'TagsetPage' => 'models/TagsetPage.php',
 ], __DIR__);
 
 Kirby::plugin("auaust/tags", [

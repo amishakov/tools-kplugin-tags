@@ -2,6 +2,6 @@
 
 use Kirby\Cms\Page;
 
-class TagSetPage extends Page
+class TagsetPage extends Page
 {
 }
