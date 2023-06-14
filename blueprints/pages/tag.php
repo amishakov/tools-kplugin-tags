@@ -35,6 +35,7 @@ return function () {
                   'fr' => 'Groupes de tags',
                   'en' => 'Tag sets'
                 ],
+                'query' => 'site.find("' . option('auaust.tags.tagsetsPage')->id() . '").children',
                 'translate' => false,
                 'help' => [
                   'fr' => '' .
