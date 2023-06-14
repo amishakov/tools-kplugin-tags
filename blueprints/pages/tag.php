@@ -29,9 +29,12 @@ return function () {
                 ],
                 'size' => 'medium'
               ],
-              'tagsets' => [
+              '_tagsets' => [
                 'type' => 'tags-tagsets',
-                'query' => 'site.find("tagsets").children',
+                'label' => [
+                  'fr' => 'Groupes de tags',
+                  'en' => 'Tag sets'
+                ],
                 'translate' => false,
                 'help' => [
                   'fr' => '' .
