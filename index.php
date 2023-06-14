@@ -16,27 +16,36 @@ Kirby::plugin("auaust/tags", [
         'value' => function ($value = null) {
           // Pretty hacky way to generate the list of tagset pages to be displayed in the field.
           // It works by generating a YAML string of the tagset pages' UUIDs.
-          return $this->toPages(
-            '- ' .
-              implode(
-                PHP_EOL . '- ',
-                $this->model()->tagsets()->pluck('uuid')
-              )
-          );
+          return
+            $this->toPages(
+              '- ' .
+                implode(
+                  PHP_EOL . '- ',
+                  $this->model()->tagsets()->pluck('uuid')
+                )
+            );
         },
       ],
       'save' => function ($tagsetsAfter) {
+
+        return array_map(function ($tagset) {
+          return $tagset['uuid'];
+        }, $tagsetsAfter);
+
         // $tagsetsAfter is an array of page objects
 
         // The model ($this->model()) is the current page(tag) which tagsets field is being saved
 
         // Creates an array of the UUIDs of the tagsets before the save
-        $tagsetsBefore = array_map(
-          function ($tagset) {
-            return $tagset->toString();
-          },
-          $this->model()->tagsets()->pluck('uuid')
-        );
+        return [
+          'before' => $tagsetsBefore = array_map(
+            function ($tagset) {
+              return $tagset->toString();
+            },
+            $this->model()->tagsets()->pluck('uuid')
+          ),
+          'after' => $tagsetsAfter
+        ];
 
         // Creates an array of the UUIDs of the new tagsets to be saved
         $tagsetsAfter = array_map(
@@ -65,6 +74,13 @@ Kirby::plugin("auaust/tags", [
           }
         );
 
+        return [
+          'before' => $tagsetsBefore,
+          'after' => $tagsetsAfter,
+          'add' => $mustAdd,
+          'remove' => $mustRemove,
+        ];
+
         // Update the tagsets
         foreach ($mustAdd as $tagsetUuid) {
           $tagset = page($tagsetUuid);
@@ -85,8 +101,6 @@ Kirby::plugin("auaust/tags", [
             ),
           ]);
         }
-
-
 
         // Return null so that the field is not saved.
         return null;
