@@ -75,24 +75,6 @@ Kirby::plugin("auaust/tags", [
 
 
 
-        // // The tagsets page from the config.
-        // $tagsetsPage = option('auaust.tags.tagsetsPage');
-
-        // // $newTags is an array of `page://<uuid>` strings.
-        // $tags = array_map(
-        //   function ($tag) {
-        //     return $tag['uuid'];
-        //   },
-        //   $value
-        // );
-
-        // foreach ($tagsetsPage->children() as $tagsetPage) {
-        //   $oldTags = $tagsetPage->tags()->toPages()->pluck('uuid');
-
-        //   // $newTags is $oldTags with
-
-        // }
-
         // Return null so that the field is not saved.
         return null;
       },
