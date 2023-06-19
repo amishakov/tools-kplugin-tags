@@ -58,34 +58,24 @@
     };
   }
   const _sfc_main = {
-    // mixins: [picker],
     props: {
       label: String,
+      help: String,
       endpoints: Object,
-      collection: Object,
-      open: Function,
       value: String
     },
     computed: {
       emptyProps() {
         return {
-          icon: "page",
-          text: this.empty || this.$t("field.pages.empty")
+          icon: "tag",
+          text: this.empty || this.$t("auaust.tags.field.tags-tagsets.empty")
         };
       }
     }
   };
   var _sfc_render = function render() {
     var _vm = this, _c = _vm._self._c;
-    return _c("k-field", _vm._b({ staticClass: "k-pages-field", attrs: { "label": _vm.label }, scopedSlots: _vm._u([{ key: "options", fn: function() {
-      return [_c("k-button-group", { staticClass: "k-field-options" }, [_vm.more && !_vm.disabled ? _c("k-button", { staticClass: "k-field-options-button", attrs: { "icon": _vm.btnIcon, "text": _vm.btnLabel }, on: { "click": _vm.open } }) : _vm._e()], 1)];
-    }, proxy: true }]) }, "k-field", _vm.$props, false), [_c("k-collection", _vm._b({ on: { "empty": _vm.open, "sort": _vm.onInput, "sortChange": function($event) {
-      return _vm.$emit("change", $event);
-    } }, scopedSlots: _vm._u([{ key: "options", fn: function({ index }) {
-      return [!_vm.disabled ? _c("k-button", { attrs: { "tooltip": _vm.$t("remove"), "icon": "remove" }, on: { "click": function($event) {
-        return _vm.remove(index);
-      } } }) : _vm._e()];
-    } }]) }, "k-collection", _vm.collection, false)), _c("k-pages-dialog", { ref: "selector", on: { "submit": _vm.select } })], 1);
+    return _c("k-field", _vm._b({ staticClass: "k-pages-field", attrs: { "label": _vm.label, "help": _vm.help } }, "k-field", _vm.$props, false), [_c("k-empty", { attrs: { "layout": "list", "icon": "tag", "text": this.$t("field.tagsets.empty") } })], 1);
   };
   var _sfc_staticRenderFns = [];
   _sfc_render._withStripped = true;
