@@ -6,6 +6,11 @@ return [
     'en' => 'Tags'
   ],
   'icon' => 'tag',
+  'options' => [
+    'changeTitle' => false,
+    'changeSlug' => false,
+    'changeStatus' => false,
+  ],
   'columns' => [
     [
       'width' => '1/1',

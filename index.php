@@ -13,7 +13,7 @@ Kirby::plugin("auaust/tags", [
     'tags-tagsets' => [
       'extends' => 'pages',
       'props' => [
-        'value' => function ($value = null) {
+        'value' => function () {
           // Pretty hacky way to generate the list of tagset pages to be displayed in the field.
           // It works by generating a YAML string of the tagset pages' UUIDs.
           return
