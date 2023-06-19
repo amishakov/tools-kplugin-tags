@@ -1,5 +1,15 @@
 <template>
   <k-field v-bind="$props" :label="label" :help="help" class="k-pages-field">
+    <template #options>
+      <k-button-group class="k-field-options">
+        <k-button
+          icon="add"
+          :text="this.$t('select')"
+          class="k-field-options-button"
+          @click="open"
+        />
+      </k-button-group>
+    </template>
     <k-empty layout="list" icon="tag" :text="this.$t('field.tagsets.empty')" />
     <!-- <k-icon :type="emptyProps.icon" />
     label:

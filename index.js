@@ -75,7 +75,9 @@
   };
   var _sfc_render = function render() {
     var _vm = this, _c = _vm._self._c;
-    return _c("k-field", _vm._b({ staticClass: "k-pages-field", attrs: { "label": _vm.label, "help": _vm.help } }, "k-field", _vm.$props, false), [_c("k-empty", { attrs: { "layout": "list", "icon": "tag", "text": this.$t("field.tagsets.empty") } })], 1);
+    return _c("k-field", _vm._b({ staticClass: "k-pages-field", attrs: { "label": _vm.label, "help": _vm.help }, scopedSlots: _vm._u([{ key: "options", fn: function() {
+      return [_c("k-button-group", { staticClass: "k-field-options" }, [_c("k-button", { staticClass: "k-field-options-button", attrs: { "icon": "add", "text": this.$t("select") }, on: { "click": _vm.open } })], 1)];
+    }, proxy: true }]) }, "k-field", _vm.$props, false), [_c("k-empty", { attrs: { "layout": "list", "icon": "tag", "text": this.$t("field.tagsets.empty") } })], 1);
   };
   var _sfc_staticRenderFns = [];
   _sfc_render._withStripped = true;
