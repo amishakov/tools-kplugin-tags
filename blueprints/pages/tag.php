@@ -30,7 +30,7 @@ return function () {
                 'size' => 'medium'
               ],
               '_tagsets' => [
-                'type' => 'tags-tagsets',
+                'type' => 'tagsets',
                 'label' => [
                   'fr' => 'Groupes de tags',
                   'en' => 'Tag sets'

@@ -68,7 +68,7 @@
       emptyProps() {
         return {
           icon: "tag",
-          text: this.empty || this.$t("auaust.tags.field.tags-tagsets.empty")
+          text: this.empty || this.$t("field.tagsets.empty")
         };
       }
     }
@@ -93,7 +93,7 @@
   const TagsetsField = __component__.exports;
   panel.plugin("auaust/tags", {
     fields: {
-      "tags-tagsets": TagsetsField
+      tagsets: TagsetsField
     }
   });
 })();

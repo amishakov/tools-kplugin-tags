@@ -32,7 +32,7 @@ export default {
     emptyProps() {
       return {
         icon: "tag",
-        text: this.empty || this.$t("auaust.tags.field.tags-tagsets.empty"),
+        text: this.empty || this.$t("field.tagsets.empty"),
       };
     },
   },
