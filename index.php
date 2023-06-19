@@ -28,6 +28,41 @@ Kirby::plugin("auaust/tags", [
       ],
       'save' => function ($tagsetsAfter) {
 
+
+        $debugFile = kirby()->root('site') . '/debug.txt';
+
+        file_put_contents(
+          $debugFile,
+          print_r(
+            [
+              array_map(
+                function ($tagset) {
+                  return $tagset['uuid'];
+                },
+                $tagsetsAfter
+              ),
+              array_map(
+                function ($uuid) {
+                  return $uuid->toString();
+                },
+                $this->model()->tagsets()->pluck('uuid')
+              ),
+            ],
+            true
+          ) . "\n\n----\n\n",
+        );
+
+        // page($tagsetsAfter[0]['uuid'])
+
+        // file_put_contents(
+        //   $debugFile,
+        //   print_r(
+        //     page($tagsetsAfter[0]['uuid']),
+        //     true
+        //   ) . "\n\n----\n\n",
+        //   FILE_APPEND
+        // );
+
         return array_map(function ($tagset) {
           return $tagset['uuid'];
         }, $tagsetsAfter);
