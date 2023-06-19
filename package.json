@@ -1,0 +1,14 @@
+{
+  "name": "auaust-kplugin-tags",
+  "version": "1.0.0",
+  "description": "Plugin for Kirby CMS that helps managing tags.",
+  "main": "src/index.js",
+  "repository": "https://github.com/AUAUST/tools-kplugin-tags",
+  "author": "apademide <contact@apademide.ch>",
+  "license": "proprietary",
+  "private": true,
+  "scripts": {
+    "dev": "npx -y kirbyup src/index.js --watch",
+    "build": "npx -y kirbyup src/index.js"
+  }
+}
