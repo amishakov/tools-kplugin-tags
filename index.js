@@ -58,11 +58,12 @@
     };
   }
   const _sfc_main = {
+    extends: "k-pages-field",
     props: {
-      label: String,
-      help: String,
-      endpoints: Object,
-      value: String
+      selected: {
+        type: Array,
+        default: () => []
+      }
     },
     computed: {
       emptyProps() {
@@ -76,8 +77,21 @@
   var _sfc_render = function render() {
     var _vm = this, _c = _vm._self._c;
     return _c("k-field", _vm._b({ staticClass: "k-pages-field", attrs: { "label": _vm.label, "help": _vm.help }, scopedSlots: _vm._u([{ key: "options", fn: function() {
-      return [_c("k-button-group", { staticClass: "k-field-options" }, [_c("k-button", { staticClass: "k-field-options-button", attrs: { "icon": "add", "text": this.$t("select") }, on: { "click": _vm.open } })], 1)];
-    }, proxy: true }]) }, "k-field", _vm.$props, false), [_c("k-empty", { attrs: { "layout": "list", "icon": "tag", "text": this.$t("field.tagsets.empty") } })], 1);
+      return [_c("k-button-group", { staticClass: "k-field-options" }, [_c("k-button", { staticClass: "k-field-options-button", attrs: { "icon": "add", "text": _vm.$t("select") }, on: { "click": _vm.open } })], 1)];
+    }, proxy: true }]) }, "k-field", _vm.$props, false), [_c("k-collection", _vm._b({ on: { "empty": _vm.open, "sort": _vm.onInput, "sortChange": function($event) {
+      return _vm.$emit("change", $event);
+    } }, scopedSlots: _vm._u([{ key: "options", fn: function({ index }) {
+      return [!_vm.disabled ? _c("k-button", { attrs: { "tooltip": _vm.$t("remove"), "icon": "remove" }, on: { "click": function($event) {
+        return _vm.remove(index);
+      } } }) : _vm._e()];
+    } }]) }, "k-collection", {
+      empty: this.emptyProps,
+      items: this.selected,
+      layout: "table",
+      link: this.link,
+      size: this.size,
+      sortable: !this.disabled && this.selected.length > 1
+    }, false)), _c("k-pages-dialog", { ref: "selector", on: { "submit": _vm.select } })], 1);
   };
   var _sfc_staticRenderFns = [];
   _sfc_render._withStripped = true;

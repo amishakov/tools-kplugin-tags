@@ -4,13 +4,35 @@
       <k-button-group class="k-field-options">
         <k-button
           icon="add"
-          :text="this.$t('select')"
+          :text="$t('select')"
           class="k-field-options-button"
           @click="open"
         />
       </k-button-group>
     </template>
-    <k-empty layout="list" icon="tag" :text="this.$t('field.tagsets.empty')" />
+    <k-collection
+      v-bind="{
+        empty: this.emptyProps,
+        items: this.selected,
+        layout: 'table',
+        link: this.link,
+        size: this.size,
+        sortable: !this.disabled && this.selected.length > 1,
+      }"
+      @empty="open"
+      @sort="onInput"
+      @sortChange="$emit('change', $event)"
+    >
+      <template #options="{ index }">
+        <k-button
+          v-if="!disabled"
+          :tooltip="$t('remove')"
+          icon="remove"
+          @click="remove(index)"
+        />
+      </template>
+    </k-collection>
+    <k-pages-dialog ref="selector" @submit="select" />
     <!-- <k-icon :type="emptyProps.icon" />
     label:
     <br />
@@ -32,11 +54,12 @@
 
 <script>
 export default {
+  extends: "k-pages-field",
   props: {
-    label: String,
-    help: String,
-    endpoints: Object,
-    value: String,
+    selected: {
+      type: Array,
+      default: () => [],
+    },
   },
   computed: {
     emptyProps() {
