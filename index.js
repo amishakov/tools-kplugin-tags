@@ -87,10 +87,9 @@
     } }]) }, "k-collection", {
       empty: this.emptyProps,
       items: this.selected,
-      layout: "table",
+      layout: "list",
       link: this.link,
-      size: this.size,
-      sortable: !this.disabled && this.selected.length > 1
+      sortable: false
     }, false)), _c("k-pages-dialog", { ref: "selector", on: { "submit": _vm.select } })], 1);
   };
   var _sfc_staticRenderFns = [];

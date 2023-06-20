@@ -14,14 +14,14 @@
         />
       </k-button-group>
     </template>
+
     <k-collection
       v-bind="{
         empty: this.emptyProps,
         items: this.selected,
-        layout: 'table',
+        layout: 'list',
         link: this.link,
-        size: this.size,
-        sortable: !this.disabled && this.selected.length > 1,
+        sortable: false,
       }"
       @empty="open"
       @sort="onInput"
