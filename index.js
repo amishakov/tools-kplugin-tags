@@ -77,7 +77,7 @@
   var _sfc_render = function render() {
     var _vm = this, _c = _vm._self._c;
     return _c("k-field", _vm._b({ staticClass: "k-pages-field", attrs: { "label": _vm.label, "help": _vm.help }, scopedSlots: _vm._u([{ key: "options", fn: function() {
-      return [_c("k-button-group", { staticClass: "k-field-options" }, [_c("k-button", { staticClass: "k-field-options-button", attrs: { "icon": "add", "text": _vm.$t("select") }, on: { "click": _vm.open } })], 1)];
+      return [_c("k-button-group", { staticClass: "k-field-options" }, [_vm.more && !_vm.disabled ? _c("k-button", { staticClass: "k-field-options-button", attrs: { "icon": _vm.btnIcon, "text": _vm.btnLabel }, on: { "click": _vm.open } }) : _vm._e()], 1)];
     }, proxy: true }]) }, "k-field", _vm.$props, false), [_c("k-collection", _vm._b({ on: { "empty": _vm.open, "sort": _vm.onInput, "sortChange": function($event) {
       return _vm.$emit("change", $event);
     } }, scopedSlots: _vm._u([{ key: "options", fn: function({ index }) {

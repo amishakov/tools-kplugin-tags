@@ -7,8 +7,9 @@
     <template #options>
       <k-button-group class="k-field-options">
         <k-button
-          icon="add"
-          :text="$t('select')"
+          v-if="more && !disabled"
+          :icon="btnIcon"
+          :text="btnLabel"
           class="k-field-options-button"
           @click="open"
         />
