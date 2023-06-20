@@ -1,6 +1,5 @@
 (function() {
   "use strict";
-  const Tagsets_vue_vue_type_style_index_0_lang = "";
   function normalizeComponent(scriptExports, render, staticRenderFns, functionalTemplate, injectStyles, scopeId, moduleIdentifier, shadowMode) {
     var options = typeof scriptExports === "function" ? scriptExports.options : scriptExports;
     if (render) {
@@ -59,41 +58,17 @@
   }
   const _sfc_main = {
     extends: "k-pages-field",
-    props: {
-      selected: {
-        type: Array,
-        default: () => []
-      }
-    },
     computed: {
       emptyProps() {
         return {
           icon: "tag",
-          text: this.empty || this.$t("field.tagsets.empty")
+          text: this.empty || this.$t("field.pages.empty")
         };
       }
     }
   };
-  var _sfc_render = function render() {
-    var _vm = this, _c = _vm._self._c;
-    return _c("k-field", _vm._b({ staticClass: "k-pages-field", attrs: { "label": _vm.label, "help": _vm.help }, scopedSlots: _vm._u([{ key: "options", fn: function() {
-      return [_c("k-button-group", { staticClass: "k-field-options" }, [_vm.more && !_vm.disabled ? _c("k-button", { staticClass: "k-field-options-button", attrs: { "icon": _vm.btnIcon, "text": _vm.btnLabel }, on: { "click": _vm.open } }) : _vm._e()], 1)];
-    }, proxy: true }]) }, "k-field", _vm.$props, false), [_c("k-collection", _vm._b({ on: { "empty": _vm.open, "sort": _vm.onInput, "sortChange": function($event) {
-      return _vm.$emit("change", $event);
-    } }, scopedSlots: _vm._u([{ key: "options", fn: function({ index }) {
-      return [!_vm.disabled ? _c("k-button", { attrs: { "tooltip": _vm.$t("remove"), "icon": "remove" }, on: { "click": function($event) {
-        return _vm.remove(index);
-      } } }) : _vm._e()];
-    } }]) }, "k-collection", {
-      empty: this.emptyProps,
-      items: this.selected,
-      layout: "list",
-      link: this.link,
-      sortable: false
-    }, false)), _c("k-pages-dialog", { ref: "selector", on: { "submit": _vm.select } })], 1);
-  };
-  var _sfc_staticRenderFns = [];
-  _sfc_render._withStripped = true;
+  const _sfc_render = null;
+  const _sfc_staticRenderFns = null;
   var __component__ = /* @__PURE__ */ normalizeComponent(
     _sfc_main,
     _sfc_render,

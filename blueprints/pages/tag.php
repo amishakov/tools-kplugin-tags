@@ -30,11 +30,12 @@ return function () {
                 'size' => 'medium'
               ],
               '_tagsets' => [
-                'type' => 'pages',
+                'type' => 'tagsets',
                 'label' => [
                   'fr' => 'Groupes de tags',
                   'en' => 'Tag sets'
                 ],
+                'icon' => 'tag',
                 'empty' => [
                   'fr' => 'Pas encore de groupe de tags sélectionné',
                   'en' => 'No tags group selected yet'
