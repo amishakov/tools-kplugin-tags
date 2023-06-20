@@ -70,10 +70,10 @@ return [
           'help' => [
             'fr' => '' .
               'Les groupes de tags permettent de regrouper des tags par thème. ' .
-              'Ils peuvent être utilisés pour connecter des produits, lister des produits par catégorie, etc.',
+              'Ils ne sont pas visibles par les utilisateurs et ne sont pas appliqués aux produits directement, mais permettent d\'associer des tags de façon à créer des "liens implicites" entre les produits qui partagent des tags similaires.',
             'en' => '' .
               'Tag sets allow to group tags by theme. ' .
-              'They can be used to connect products, list tags by category, etc.'
+              'They are not visible to users and are not applied to products directly, but allow to associate tags in order to create "implicit links" between products that share similar tags.'
           ],
           'template' => 'tagset',
           'parent' => 'site.find("tagsets")',
