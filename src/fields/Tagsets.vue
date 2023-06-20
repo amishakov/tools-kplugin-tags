@@ -1,3 +1,7 @@
+<!--
+  This whole component is mostly based on Kirby's pages field:
+  https://github.com/getkirby/kirby/blob/3.9.5/panel/src/components/Forms/Field/PagesField.vue
+-->
 <template>
   <k-field v-bind="$props" :label="label" :help="help" class="k-pages-field">
     <template #options>
@@ -32,6 +36,7 @@
         />
       </template>
     </k-collection>
+
     <k-pages-dialog ref="selector" @submit="select" />
     <!-- <k-icon :type="emptyProps.icon" />
     label:
