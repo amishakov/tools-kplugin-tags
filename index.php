@@ -159,12 +159,4 @@ Kirby::plugin("auaust/tags", [
     // A page which children are used to store the tag sets.
     'tagsetsPage' => page('tagsets'),
   ],
-  'translations' => [
-    'en' => [
-      'field.tagsets.empty' => "No tags group selected yet"
-    ],
-    'fr' => [
-      'field.tagsets.empty' => "Pas encore de groupe de tags sélectionné"
-    ],
-  ],
 ]);

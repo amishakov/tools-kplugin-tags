@@ -30,10 +30,14 @@ return function () {
                 'size' => 'medium'
               ],
               '_tagsets' => [
-                'type' => 'tagsets',
+                'type' => 'pages',
                 'label' => [
                   'fr' => 'Groupes de tags',
                   'en' => 'Tag sets'
+                ],
+                'empty' => [
+                  'fr' => 'Pas encore de groupe de tags sélectionné',
+                  'en' => 'No tags group selected yet'
                 ],
                 'query' => 'site.find("' . option('auaust.tags.tagsetsPage')->id() . '").children',
                 'translate' => false,
