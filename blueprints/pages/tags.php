@@ -55,7 +55,8 @@ return [
           'parent' => 'site.find("tags")',
           'layout' => 'table',
           'sortable' => false,
-          'search' => true
+          'search' => true,
+          'limit' => 15,
         ]
       ]
     ],
@@ -80,7 +81,8 @@ return [
           'parent' => 'site.find("tagsets")',
           'layout' => 'table',
           'sortable' => false,
-          'search' => true
+          'search' => true,
+          'limit' => 15,
         ]
       ]
     ]

@@ -6,6 +6,10 @@ return function () {
       'fr' => 'Tag',
       'en' => 'Tag'
     ],
+    'create' => [
+      'status' => 'unlisted',
+      'redirect' => false,
+    ],
     'icon' => 'tag',
     'columns' => [
       [
