@@ -38,6 +38,7 @@ Kirby::plugin("auaust/tags", [
     // Both tags and tagsets use the same blueprint as they're both only a way to access the tags.
     'pages/tags' =>    $tagsBlueprint = require_once __DIR__ . '/blueprints/pages/tags.php',
     'pages/tagsets' => $tagsBlueprint,
+    'files/tag-cover' =>   require_once __DIR__ . '/blueprints/files/cover.php',
   ],
   'options' => [
     // A page which children are used to store the tags.

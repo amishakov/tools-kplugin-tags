@@ -58,6 +58,24 @@ return function () {
             ]
           ]
         ]
+      ],
+      [
+        'width' => '1/3',
+        'sections' => [
+          'meta' => [
+            'type' => 'fields',
+            'fields' => [
+              'cover' => [
+                'type' => 'files',
+                'multiple' => false,
+                'query' => 'page.images',
+                'uploads' => [
+                  'template' => 'tag-cover'
+                ]
+              ]
+            ]
+          ]
+        ]
       ]
     ]
   ];
