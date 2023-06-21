@@ -8,7 +8,7 @@ return function () {
     ],
     'create' => [
       'status' => 'unlisted',
-      'redirect' => false,
+      'redirect' => true,
     ],
     'icon' => 'tag',
     'columns' => [
@@ -71,9 +71,19 @@ return function () {
                 'query' => 'page.images',
                 'uploads' => [
                   'template' => 'tag-cover'
-                ]
+                ],
+                'layout' => 'cardlets',
+                'size' => 'small',
+                'translate' => false,
               ]
             ]
+          ],
+          'files' => [
+            'type' => 'files',
+            'headline' => [
+              'fr' => 'Fichiers uploadés',
+              'en' => 'Uploaded files'
+            ],
           ]
         ]
       ]
