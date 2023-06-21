@@ -54,7 +54,8 @@ return [
           'template' => 'tag',
           'parent' => 'site.find("tags")',
           'layout' => 'table',
-          'sortable' => false
+          'sortable' => false,
+          'search' => true
         ]
       ]
     ],
@@ -77,7 +78,9 @@ return [
           ],
           'template' => 'tagset',
           'parent' => 'site.find("tagsets")',
-          'layout' => 'table'
+          'layout' => 'table',
+          'sortable' => false,
+          'search' => true
         ]
       ]
     ]
